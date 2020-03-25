@@ -73,7 +73,7 @@ def randomize(max_level=50,
 
     level_up()
     print("%-3s %s" % (1, "--"))
-    while level <= max_level - 1:
+    while level < max_level:
         try:
             rand_index = random.choice(list(available_by_level.keys()))
         except IndexError:
