@@ -86,6 +86,9 @@ def randomize(max_level=50,
         
         if "free_stat_up" in perk.keys():
             stat_up(perk["free_stat_up"])
+            try:
+                available_by_level.pop(perk["free_stat_up"]+"0")
+            except: pass
             level_str = "--"
             rank_str = ""
         else:
